@@ -9,7 +9,7 @@ enum error_code {
 	USAGE_ERROR,
 };
 
-static enum error_code error;
+static enum error_code error = SUCCESS;
 
 static void (*error_print_function)(char *program_name);
 
