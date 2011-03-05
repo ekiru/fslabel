@@ -12,7 +12,11 @@ char *fslabel_dir(char *label_name) {
 		no_home_directory_error();
 		return NULL;
 	}
-	if ((path = path_join(home, label_name)) == NULL) {
+	if ((path = path_join(home, ".fslabel")) == NULL) {
+		allocation_error();
+		return NULL;
+	}
+	if ((path = path_join(path, label_name)) == NULL) {
 		allocation_error();
 		return NULL;
 	}
