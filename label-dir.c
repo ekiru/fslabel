@@ -6,7 +6,7 @@
 int main(int argc, char **argv) {
 	char *path;
 	if (argc != 2) {
-		usage_error();
+		dir_usage_error();
 		goto error;
 	}
 

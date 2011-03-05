@@ -31,13 +31,13 @@ void no_home_directory_error(void) {
 	error_print_function = &no_home_directory_error_print;
 }
 
-static void usage_error_print(char *program_name) {
+static void dir_usage_error_print(char *program_name) {
 	fprintf(stderr, "Usage: %s LABEL\n", program_name);
 }
 
-void usage_error(void) {
+void dir_usage_error(void) {
 	error = USAGE_ERROR;
-	error_print_function = &usage_error_print;
+	error_print_function = &dir_usage_error_print;
 }
 
 int error_code(void) {
